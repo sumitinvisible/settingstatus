@@ -17,12 +17,13 @@ app.get('/expressions', (req, res, next) => {
   res.send(expressions);
 });
 
-app.get('/expressions/:id', (req, res, next) => {
-  const foundExpression = getElementById(req.params.id, expressions);
+app.get('/expressions/:ido', (req, res, next) => {
+  const foundExpression = getElementById(req.params.ido, expressions);
+  console.log(req.params);
   if (foundExpression) {
     res.send(foundExpression);
   } else {
-    res.status(404).send("hbb");
+    res.status(404).send("chill there is nothing to loop ri8 now");
   }
 });
 
