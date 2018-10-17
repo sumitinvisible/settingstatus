@@ -26,7 +26,10 @@ app.get('/expressiions/:ido', (req, res, next) => {
     res.status(404).send("chill there is nothing to loop ri8 now");
   }
 });
-
+const monsters = [{ type: 'werewolf' }, { type: 'hydra' }, { type: 'chupacabra' }];
+app.get('/j', (req, res, next) => {
+  res.send(monsters);
+});
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
 });
