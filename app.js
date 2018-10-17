@@ -13,11 +13,11 @@ const PORT = process.env.PORT || 4001;
 // Use static server to serve the Express Yourself Website
 app.use(express.static('public'));
 
-app.get('/expressions', (req, res, next) => {
+app.get('/expressiions', (req, res, next) => {
   res.send(expressions);
 });
 
-app.get('/expressions/:ido', (req, res, next) => {
+app.get('/expressiions/:ido', (req, res, next) => {
   const foundExpression = getElementById(req.params.ido, expressions);
   console.log(req.params);
   if (foundExpression) {
